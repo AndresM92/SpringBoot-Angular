@@ -1,0 +1,33 @@
+<div class="container " style="text-align:center;">
+
+    <div class="container sophos " style="background-color: black; text-align: left;">
+      <div class="row">
+        <!--<div class="col-6"><img   src="./assets/Sx.png" style="width: 40%;"/></div>-->
+        <div class="col-2"><img   src="./assets/log.png" style="width:23%; margin-left: 138%;"/></div>
+        <div class="col-3" style="margin-left: 8% "><p style="color: white; font-size: smaller;">Edison Andrés <br>Consultant</p></div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-light" style="margin-left: 35%; margin-right: 38%; margin-block-end: 3%;border-radius: 10px; width: 35%; margin-top: 3%; ">
+      <div class="container-fluid" >
+        <form class="d-flex" [formGroup]="s" >
+          <img  style="margin-right: 2%;" src="./assets/search.png" type="submit" (click)="Search()"/>
+          <input  class="form-control me-2" type="text" placeholder="Enter CC" [(ngModel)]="textoDeInput" aria-label="Search"  name="search" formControlName="cc">
+        </form>
+      </div>
+      <div class=" text-danger" *ngIf="cc.invalid && (cc.dirty || cc.touched)" style="margin-top: 2%; color: white;" >Only numbers and maximum 12 digits.</div>
+    </nav>
+
+    <div class="row" style="margin-left: 23.5%;">
+      <div class=" col-6" style="width: 18rem;">
+        <img  class="add" src="./assets/new_user.png" [routerLink]="['add']" style="width: 50%; margin-left: 5%;" type="submit"/>
+        <h5 ><strong>Add users</strong></h5>
+      </div>
+
+      <div class="col-6 " style="width: 18rem; ">
+        <img  class="list" src="https://img.icons8.com/cotton/256/000000/ingredients-list.png" style="width: 50%;  margin-left: 5%;" [routerLink]="['list']" type="submit"/>
+        <h5 ><strong>List users</strong></h5>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>

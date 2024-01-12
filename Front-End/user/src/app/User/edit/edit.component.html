@@ -1,0 +1,52 @@
+<div class="container " >
+  <img  class="back" src="./assets/back.png" [routerLink]="['']" type="submit" style="width: 5%; margin-top: 3%; margin-left: 20%;margin-block-end: 3%"/>
+  <div class="card  col-5" style="margin-left: 30%;">
+    <div class="card-header " style="text-align: center;">
+      <img style="width: 15%;" src="./assets/edit_user.png"/>
+      <h3>Edit User</h3>
+    </div>
+    <div class="card-body " >
+      <form  [formGroup]="formRegis"  class="row g-3 needs-validation" novalidate  >  
+
+        <div class="form-group col-10 " >
+          <label for="cc" class="form-label" style="margin-left: 10%;" class="negr">Document number</label>
+          <input mdbInput mdbValidate type="text" class="form-control" [(ngModel)]="user.cc" name="cc" formControlName="cc" id="cc" required style="margin-left: 10%;"onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" > 
+          <div class=" text-danger" *ngIf="cc.invalid && a.valueOf()"  >Camp requiered:Only numbers and maximum 12 digits.</div>
+        </div>
+
+        <div class="form-group col-10">
+          <label for="validationCustomName" style="margin-left: 10%;"class="negr">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="user.name" name="name" formControlName="name" id="validationCustomName"  required style="margin-left: 10%;"onkeypress="return (event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122)"> 
+          <div class=" text-danger" *ngIf="name.invalid &&a.valueOf() "  >Camp requiered: Only text and maximum 7 character.</div>
+        
+        </div>
+        <div class="form-group col-10">
+          <label for="validationCustomLastname" style="margin-left: 10%;"class="negr">Last Name</label>
+          <input type="text" class="form-control" [(ngModel)]="user.last_name" name="last_name" formControlName="last_name" id="validationCustomLastname"  required style="margin-left: 10%;"onkeypress="return (event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122)"> 
+          <div class=" text-danger" *ngIf="last_name.invalid &&a.valueOf()"  >Camp requiered: Only text and maximum 10 character.</div>
+
+        </div>
+        <div class="form-group col-10">
+          <label for="validationDefaulAge" style="margin-left: 10%;"class="negr">Age</label>
+          <input type="number" class="form-control" [(ngModel)]="user.age" name="age" formControlName="age" id="validationCustomAge"  required style="margin-left: 10%;"onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"> 
+          <div class=" text-danger" *ngIf="age.invalid && a.valueOf()"  >Camp requiered:Only numbers.</div>
+        </div>
+
+        <div class="form-group col-10">
+          <label for="validationCustomNumberphone" style="margin-left: 10%;" class="negr">Phone Number </label>
+          <input type="text" class="form-control" [(ngModel)]="user.number_phone" name="number_phone" formControlName="number_phone" id="validationCustomNumberphone"  required style="margin-left: 10%;"onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"> 
+          <div class=" text-danger" *ngIf="number_phone.invalid &&a.valueOf()"  >Camp requiered:Only numbers and maximum 10 digits.</div>
+        </div>
+
+        <div class="form-group col-10">
+          <label for="validationCustomEmail" style="margin-left: 10%;" class="negr">Email</label>
+          <input type="text" class="form-control" [(ngModel)]="user.email" name="email" formControlName="email" id="validationCustomEmail"  required style="margin-left: 10%;"> 
+          <div class=" text-danger" *ngIf="email.invalid &&a.valueOf()"  >Camp requiered: Only text and maximum 30 character.</div>
+        </div>
+
+        <button class="btn1" (click)="Update(user)"  type="submit" style="margin-left: 30%;">Save</button>
+        <!--img  (click)="Save()" src="./assets/save.png" style="width: 8% ;margin-left: 45%; margin-top: 4%;" type="submit"/-->
+      </form>
+    </div>
+  </div>
+</div>

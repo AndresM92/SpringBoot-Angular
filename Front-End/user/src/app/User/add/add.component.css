@@ -1,0 +1,66 @@
+.btn1 {
+    border-radius: 20px;
+    width: 40%;
+    padding: 3px 10px;
+    margin: 20px;
+    font-size: 16px;
+    border: 3px solid #0a6616b4;
+    color: rgb(0, 0, 0);
+    cursor: pointer; 
+    border: 3px solid #0a6616b4;
+    background: linear-gradient(to right, transparent 50%, #14bd2ab4 50%);
+    background-size: 220%;
+    background-position: left;
+    transition: background-position 0.8s;
+}
+
+.card-body{
+  border-radius: 1%;
+  border: 2px solid rgba(0, 0, 0, 0.548);
+}
+
+.card{
+  border-radius: 1%;
+  border: 3px solid rgb(0, 0, 0);
+  background: #3db1ff0a;
+  box-shadow: 0px 10px 15px rgba(8, 175, 226, 0.534);
+}
+
+.card-header{
+  background: #0000002d;            
+  margin: 7px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.back:hover{
+border-radius:50%;
+box-shadow: 0px 0px 15px 15px #02010052;
+}
+
+.btn1:hover {
+    background-position: right;
+    color: black;
+    font-weight: 700;
+}
+
+  
+  .ng-invalid.ng-touched:not(form)  {
+    border-left: 8px solid #fc0400; 
+  }
+
+  .ng-invalid.ng-touched:not(form)  {
+    border-right: 8px solid #fc0400; 
+  }
+
+  .ng-valid.ng-touched:not(form)  {
+       border-right: 8px solid #42A948; 
+  }
+
+  .text-danger{ 
+    margin-left: 10%;
+    font: bold 70% "Arial" ;
+  }
+
+.negr{
+    font-weight: bold;
+}

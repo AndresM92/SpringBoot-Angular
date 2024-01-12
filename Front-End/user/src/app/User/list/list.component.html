@@ -1,0 +1,30 @@
+<div class="container" style="margin-left: 22%;">
+  <img  src="./assets/back.png" [routerLink]="['']" type="submit" style="width: 5%; margin-top: 4%; margin-bottom: 4%;"/>
+    <table class="table table-hover"  style="width: 70%;text-align: center;">
+      <thead class="thead-dark">
+        <tr class="table-dark">
+          <th scope="col">Document number</th>
+          <th scope="col">Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users" class="text-center tr_list">
+          <td>{{user.cc}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.last_name}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.number_phone}}</td>
+          <td>{{user.email}}</td>
+          <td>
+            <img class="edit" (click)="Edit(user)" src="./assets/edit.png" style="width: 12%; margin-right: 5%;" type="submit"/>
+            <img class="edit" (click)="DeleteUser(user)" src="./assets/delete.png" style="width: 12%;" type="submit"/>
+          </td>
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
